@@ -142,6 +142,11 @@ if ("zoo" %in% rownames(installed.packages()) == FALSE) {
 }
 library(zoo)
 
+if ("magrittr" %in% rownames(installed.packages()) == FALSE) {
+  install.packages("magrittr")
+}
+library(magrittr)
+
 
 ##################################################################################################
 #
