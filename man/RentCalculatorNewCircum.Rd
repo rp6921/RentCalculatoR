@@ -7,7 +7,7 @@
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
-This function combines all the elements that affect the change in rent due to changings in the market circumstances like inflation rates (C.1), mortgage rates (C.2) or cost increasing (C.3). Because they are ale relatively expressed to the acutal rent and to the market changes, they can be combined into one. This will lead to actualization in the rent regarding to all market circumstances.
+This function combines all the elements that affect the change in rent due to changings in the market circumstances like inflation rates, mortgage rates or cost increasing (have a look on those separate functions in our package or in the code PART C.1 - C.3). Because they are all relatively expressed to the acutal rent and to the market changes, they can be combined into one. This will lead to actualization in the rent regarding to all market circumstances.
 }
 \usage{
 RentCalculatorNewCircum(act_rent_CHF, inflation_rate_last_date, reference_last_date, cost_incr_last_date, flat_rate = 0.5)
