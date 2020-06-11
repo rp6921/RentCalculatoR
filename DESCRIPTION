@@ -8,5 +8,9 @@ Description: With the package RentCalculatoR you can calculate the change in ren
 License: GPL-2
 Encoding: UTF-8
 Depends: xml2, rvest, readr, readxl, tidyr, zoo, magrittr
+
+Suggests: knitr, rmarkdown
+VignetteBuilder:knitr
+
 LazyData: true
 RoxygenNote: 7.1.0
