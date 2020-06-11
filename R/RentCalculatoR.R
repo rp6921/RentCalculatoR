@@ -501,7 +501,7 @@ inf_rate_change <- function(act_rent_CHF, inflation_rate_last_date) {
   # calling the results of the RentInformations function (PART A.3) and take the actual inflation rate
   act_data <- as.data.frame(RentInformations( ))
   act_inflation <- as.numeric(act_data$act_inflation)
-
+  
   # calling the results of the inflation_rates function (PART A.2) and take the last inflation rate
   infl_data <- as.data.frame(inflation_rates())
   reference_last_date <- as.Date(inflation_rate_last_date)
@@ -514,22 +514,22 @@ inf_rate_change <- function(act_rent_CHF, inflation_rate_last_date) {
 
   # it's allowed to calculate 40 % of the difference into the rent
   inflation_difference <- act_inflation - last_inflation
-  allowed_inflation_rate <- 0.4*inflation_difference/100
+  
+  allowed_inflation_rate <- 0.4*inflation_difference
 
 
   # PRINT RESULTS
   #############################
-
+  
   # total rent results and report
-  total_add_rent_monthly_CHF <- act_rent_CHF*allowed_inflation_rate
-  total_new_rent_monthly_CHF <- (12*act_rent_CHF + total_add_rent_monthly_CHF)/12
+  total_add_rent_monthly_CHF <- act_rent_CHF*allowed_inflation_rate/100
+  total_new_rent_monthly_CHF <- act_rent_CHF + total_add_rent_monthly_CHF
   rent_answers <- c("Your actual rent per month in CHF is:", "The additional rent per month in CHF is:",
                     "And the new total rent per month in CHF is:")
   rent_summary <- c(act_rent_CHF, total_add_rent_monthly_CHF, total_new_rent_monthly_CHF)
   rent_summary <- round(rent_summary/5, digits = 2)*5   # round to 5 cts.
   rent_result <- as.table(cbind(rent_answers, rent_summary))
   list(rent_result, c("due to 40 % of the change in inflation (in %):", allowed_inflation_rate))
-
 }
 
 
