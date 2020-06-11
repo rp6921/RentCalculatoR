@@ -13,6 +13,7 @@ We provide an Example that uses all functions of the RentCalculatoR in one task.
 
 For further information and more specific examples please consult the help pages of the specific function inside the package:
 
+??RentCalculatoR
 ?RentInformations
 ?RentInvestCalculatoR
 ?inf_rate_change
